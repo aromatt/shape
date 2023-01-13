@@ -97,4 +97,8 @@ def shape(data, key_patterns=None, describe_numbers=False, sort=False):
 if __name__ == '__main__':
     import json
     import sys
-    print(json.dumps(shape(json.loads(sys.argv[1]))))
+    import fileinput
+    data = []
+    for line in fileinput.input(encoding='utf-8'):
+        data.append(json.loads(line))
+    print(json.dumps(shape(data)))
