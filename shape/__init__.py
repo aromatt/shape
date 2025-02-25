@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import types
 import re
 
@@ -96,7 +98,6 @@ def shape(data, key_patterns=None, describe_numbers=False, sort=False):
 
 if __name__ == '__main__':
     import json
-    import sys
     import fileinput
     data = []
     for line in fileinput.input(encoding='utf-8'):
